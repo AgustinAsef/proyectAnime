@@ -1,0 +1,110 @@
+.navDivsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.navLinkHomeContainer {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navLinkHome {
+    color: #965fd4;
+    font-weight: 800;
+    font-size: x-large;
+}
+
+.navLinkHomeImg{
+    height: 90px;
+    width: auto;
+}
+
+.position{
+    position: relative;
+}
+
+.navLinkTittleOne{
+    color: #965fd4;
+}
+
+.navLinkTittleTwo{
+    color: #8bd450;
+}
+
+.navLinkHomeContainer:hover .navLinkTittleOne{
+    text-shadow: 3px 3px 0px rgba(139,212,80,1);
+    translate: -3px -3px;
+}
+
+.navLinkHomeContainer:active .navLinkTittleOne{
+    text-shadow: 1px 1px 0px rgba(139,212,80,1);
+    translate: 1px 1px;
+}
+
+.navButtonLinkLog{
+    height: 50px;
+    width: 100px;
+
+    border: solid #965fd4;
+
+    background-color: transparent;
+
+    font-size: medium;
+    font-weight: 600;
+    color: #965fd4;
+
+    cursor: pointer;
+}
+
+.navButtonLinkLog:hover{
+    -webkit-box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+    -moz-box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+    box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+    translate: -2px -2px;
+}
+
+.navButtonLinkLog:active{
+    -webkit-box-shadow: 1px 1px 0px 1px rgba(141,214,81,1);
+    -moz-box-shadow: 1px 1px 0px 1px rgba(141,214,81,1);
+    box-shadow: 1px 1px 0px 1px rgba(141,214,81,1);    
+    translate: 1px 1px;
+}
+
+.navButtonLinkSing{
+    height: 50px;
+    width: 100px;
+
+    border: solid #965fd4;
+
+    background-color: transparent;
+
+    font-size: medium;
+    font-weight: 600;
+    color: #965fd4;
+
+    cursor: pointer;
+
+    -webkit-box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+    -moz-box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+    box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+
+}
+
+/* .navButtonLinkSing:hover{
+    -webkit-box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+    -moz-box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+    box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+    translate: -2px -2px;
+} */
+
+.navButtonLinkSing:active{
+    -webkit-box-shadow: 1px 1px 0px 1px rgba(141,214,81,1);
+    -moz-box-shadow: 1px 1px 0px 1px rgba(141,214,81,1);
+    box-shadow: 1px 1px 0px 1px rgba(141,214,81,1);    
+/*     translate: 1px 1px;
+ */
+    translate: 2px 2px;
+}

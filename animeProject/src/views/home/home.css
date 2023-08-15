@@ -1,0 +1,38 @@
+.seriesDivContainer{
+    background-color: rgba(0, 0, 0, 0.20);
+    color:#965fd4 ;    
+}
+
+.seriesNameDivContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonWatchSeason{
+    width: auto;
+    height: auto;
+}
+
+.seriesCapsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.seriesbr{
+    background-color: rgb(54, 54, 54);
+    width: 95%;
+    height: 1px;
+}
+
+.buttonWatchCaps{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.seriesCaps{
+    width: 50px;
+    height: auto;
+    border: solid #965fd4;
+}

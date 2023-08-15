@@ -1,0 +1,25 @@
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p{
+  padding: 1rem;
+}
+
+.m{
+  margin: 1rem;
+}
+
+.br{
+  background-color: rgb(82, 82, 82);
+  height: 1px;
+  width: 96%;
+}

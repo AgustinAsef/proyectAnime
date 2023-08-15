@@ -1,0 +1,8 @@
+.singInDivContainer{
+    background-color: rgba(31, 31, 31, 0.555);
+    color:#965fd4;
+    border: solid #965fd4;
+
+    height: 400px;
+    width: 400px;
+}

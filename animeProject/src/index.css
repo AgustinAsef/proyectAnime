@@ -1,0 +1,54 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: #313131;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body{
+  margin: 0px;
+}
+
+.button{
+  height: 50px;
+  width: 100px;
+
+  border: solid #965fd4;
+
+  background-color: transparent;
+
+  font-size: medium;
+  font-weight: 600;
+  color: #965fd4;
+
+  cursor: pointer;
+
+  -webkit-box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+  -moz-box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+  box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+
+}
+
+/* .navButtonLinkSing:hover{
+  -webkit-box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+  -moz-box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+  box-shadow: 5px 5px 0px -1px rgba(139,212,80,1);
+  translate: -2px -2px;
+} */
+
+.button:active{
+  -webkit-box-shadow: 1px 1px 0px 1px rgba(141,214,81,1);
+  -moz-box-shadow: 1px 1px 0px 1px rgba(141,214,81,1);
+  box-shadow: 1px 1px 0px 1px rgba(141,214,81,1);    
+/*     translate: 1px 1px;
+*/
+  translate: 2px 2px;
+}
