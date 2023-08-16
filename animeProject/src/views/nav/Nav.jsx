@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import logo from '../imgs/logo.png'
 import './nav.css'
 
 function Nav() {
@@ -7,18 +6,18 @@ function Nav() {
         <div className="navDivsContainer">
             <div className="m ">
                 <Link to={'/home'} className="navLinkHomeContainer">
-                    <img src={logo} alt="" className="p navLinkHomeImg"/>
+{/*                     <img src={logo} alt="" className="p navLinkHomeImg"/>
                     <div className="navLinkHome">
                         <h1 className="navLinkTittleOne">ANIMEpj.</h1>
                     </div>
-                </Link>
+ */}                </Link>
             </div>
             <div className="m">
                 <Link className="m">
-                    <button className="navButtonLinkSing">Sing In</button>   
+                    <button className="button">Sing In</button>   
                 </Link>
                 <Link>
-                    <button className="navButtonLinkLog">Log In</button>
+                    <button className="button">Log In</button>
                 </Link>
             </div>
         </div>

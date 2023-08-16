@@ -19,11 +19,11 @@ function SingInForm() {
                 </div>
                 <div className="p">
                     {"Contrasena: "}
-                    <input type="text" name="" id="" placeholder="Password" />
+                    <input type="password" name="" id="" placeholder="Password" />
                 </div>
                 <div>
                     {"Confirma tu contrasena: "}
-                    <input type="text" name="" id="" placeholder="Confirm your password"/>
+                    <input type='password' name="" id="" placeholder="Confirm your password"/>
                 </div>
                 <div className="p">
                     <button className="button" type="submit">Sing In</button>

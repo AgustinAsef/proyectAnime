@@ -1,38 +1,57 @@
-.seriesDivContainer{
-    background-color: rgba(0, 0, 0, 0.20);
-    color:#965fd4 ;    
+.seriesDivContainer {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #965fd4;
 }
 
-.seriesNameDivContainer{
+.seriesNameDivContainer {
     display: flex;
     justify-content: space-between;
 }
 
-.buttonWatchSeason{
-    width: auto;
-    height: auto;
+.buttonWatchSeason {
+    width: 40px;
+    height: 50px;
 }
 
-.seriesCapsContainer{
+.seriesCapsContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.seriesbr{
+.seriesbr {
     background-color: rgb(54, 54, 54);
     width: 95%;
     height: 1px;
 }
 
-.buttonWatchCaps{
+.buttonWatchCaps {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.seriesCaps{
+.show {
+    display:inline-flex;
+}
+
+.notShow {
+    display: none;
+}
+
+.arrowDown {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    
+    border-top: 10px solid #965fd4;
+}
+
+.imgCheckCaps{
+    height: 30px;
+    width: 30px;
+}
+
+.capsButtons{
+    height: 50px;
     width: 50px;
-    height: auto;
-    border: solid #965fd4;
 }

@@ -1,0 +1,19 @@
+.newSeriesDiv{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.newSeriesDivForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.show {
+    display:inline-flex;
+}
+
+.notShow {
+    display: none;
+}
