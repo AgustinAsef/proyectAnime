@@ -1,10 +1,16 @@
 import NewSerie from "../forms/newSerie";
 import "./home.css";
+import Series from "./series/series";
 
 function Home(data) {
-    data = data.data;
-    console.log(data[0]);
-
+    const user = {
+        userId: data.data[0].id,
+        userMail: data.data[0].userMail,
+        userName: data.data[0].userName,
+        userPasword: data.data[0].userPasword,
+        userSeries: data.data[0].series
+    }
+    
     return (
         <>
             {
@@ -19,35 +25,10 @@ function Home(data) {
                         temporada y capitulos, o ponerles nombres a cada una de
                         las cosas, como vos lo prefieras.
                     </p>
-                    <h1>!Hola otra vez {data[0].userName}!</h1>
+                    <h1>!Hola otra vez {user.userName}!</h1>
                     <NewSerie/>
                     <div>
-                        {data[0].series.map((serie)=>
-                            <div key={serie.id} className="seriesDivContainer m p">
-                                <div className="seriesNameDivContainer p">
-                                    <h3>{serie.serieName}</h3>
-                                    <button className="button buttonWatchSeason"><div className='arrowDown'></div></button>
-                                </div>
-                                {serie.seasons.map((season)=>
-                                <div key={season.id}>                                
-                                    <div className="center m">
-                                    <p className="seriesbr"></p>
-                                        <div className="buttonWatchCaps">
-                                            <h4>{season.seasonName}</h4>
-                                            <button className="button buttonWatchSeason"><div className='arrowDown'></div></button>
-                                        </div>                            
-                                    </div>
-                                    <div className="seriesCapsContainer">
-                                        {season.caps.map((cap)=>
-                                        <div key={cap.id}>
-                                            <button className="seriesCaps m button capsButtons" id='cap3'>Cap. {cap.number}</button>     
-                                        </div>
-                                        )}
-                                    </div>
-                                </div>
-                                )}                               
-                            </div>
-                        )}
+                        <Series data={user.userSeries}/>
                     </div>    
                 </section>
             }

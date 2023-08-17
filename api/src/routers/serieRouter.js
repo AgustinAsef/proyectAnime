@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { newSerie, getSeries } = require("../controllers/taskControler.js");
+const { newSerie, getSeries } = require("../controllers/seriesControler.js");
 
 const serieRouter = Router();
 

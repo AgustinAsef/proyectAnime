@@ -1,8 +1,23 @@
+import { useEffect, useState } from "react";
+import axios from "axios"
 import Home from "../../views/home/Home";
 import Nav from "../../views/nav/Nav";
 
 function HomeLogic() {
-    const data = [
+    const [data, setData] = useState()
+
+    useEffect(()=>{
+        const fechData = async ()=>{
+            try {
+                const dataDB = await axios.get(`http://localhost:3030/`)
+                setData(dataDB.data)
+            } catch (error) {
+                return(error)
+            }
+        }
+        fechData()
+    },[data])
+/*     const data = [
         {
             id: 1,
             userName: "agustin",
@@ -12,9 +27,11 @@ function HomeLogic() {
                 {
                     id: "NeonGenesisEvangelion",
                     serieName: "Neon Genesis Evangelion",
+                    show: "notShow",
                     seasons: [
                         {
-                            seasonName: "Neon Genesis Evangelion",
+                            id: 1,
+                            seasonName: "Neon Genesis Evangelion Cap. 1",
                             caps:[
                                 { id: 1,
                                     number: 1,
@@ -52,7 +69,8 @@ function HomeLogic() {
                                 }
                                 ],                        
                             },
-                        {
+                        {   
+                            id: "NeonGenesisEvangelion:TheEndofEvangelion",
                             seasonName: "Neon Genesis Evangelion: The End of Evangelion",
                             caps:[
                                 { id: 1,
@@ -108,7 +126,7 @@ function HomeLogic() {
                     serieName: "Nanatsu no Taizai",
                     seasons: [
                         {
-                            id: "Seisen no Shirushi",
+                            id: "SeisennoShirushi",
                             seasonName: "Seisen no Shirushi",
                             caps:[
                             { id: 1,
@@ -168,6 +186,7 @@ function HomeLogic() {
                             ],
                         },
                         {
+                            id:"KamigaminoGekirin",
                             seasonName: "Kamigami no Gekirin",
                             caps:[
                             {   id: 1,
@@ -202,6 +221,7 @@ function HomeLogic() {
                             ],
                         },
                         {
+                            id: "FundonoShinpan",
                             seasonName: "Fundo no Shinpan",
                             caps: [
                             { id: 1,
@@ -239,10 +259,9 @@ function HomeLogic() {
                 },
             ],
         },
-    ];
-    const userSession = false;
+    ]; */
 
-    if (userSession) {
+    if (!data) {
         return (
             <>
                 <h1>chupate mansa</h1>

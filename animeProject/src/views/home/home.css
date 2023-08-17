@@ -32,7 +32,7 @@
 }
 
 .show {
-    display:inline-flex;
+    display:flex;
 }
 
 .notShow {

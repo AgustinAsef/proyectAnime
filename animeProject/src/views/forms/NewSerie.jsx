@@ -16,13 +16,21 @@ function NewSerie() {
                     <button className="button buttonWatchSeason" onClick={showNewSeriesForm}><div>+</div></button>
                 </div>
             <form className='notShow newSeriesDivForm m p' id='newSerieForm'>
+                <div>
                     {"Serie: "}
                     <input type="text" name="" id="" placeholder="Name" className='m'/>
+                </div>
+                <div>
                     {"Temporadas: "}
                     <input type="number" name="" id="" placeholder="Last name" className='m'/>
+                </div>
+                <div>
                     {"Capitulos: "}
                     <input type="number" name="" id="" placeholder="capitulos" className='m'/>
-                    <button className='button'>Agregar</button>
+                </div>
+                <div>
+                    <button className='button'>Agregar</button>                    
+                </div>
             </form>
         </div>     
     );
