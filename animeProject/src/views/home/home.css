@@ -19,18 +19,6 @@
     justify-content: center;
 }
 
-.seriesbr {
-    background-color: rgb(54, 54, 54);
-    width: 95%;
-    height: 1px;
-}
-
-.buttonWatchCaps {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
 .show {
     display:flex;
 }

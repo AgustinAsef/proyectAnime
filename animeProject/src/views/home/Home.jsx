@@ -1,6 +1,5 @@
 import NewSerie from "../forms/newSerie";
 import "./home.css";
-import Series from "./series/series";
 
 function Home(data) {
     const user = {
@@ -10,7 +9,6 @@ function Home(data) {
         userPasword: data.data[0].userPasword,
         userSeries: data.data[0].series
     }
-    
     return (
         <>
             {
@@ -26,10 +24,7 @@ function Home(data) {
                         las cosas, como vos lo prefieras.
                     </p>
                     <h1>!Hola otra vez {user.userName}!</h1>
-                    <NewSerie/>
-                    <div>
-                        <Series data={user.userSeries}/>
-                    </div>    
+                    <NewSerie data={user.userSeries}/> 
                 </section>
             }
         </>

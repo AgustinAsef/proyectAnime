@@ -1,13 +1,13 @@
 const axios = require("axios");
-const mysql = require("mysql");
-const config = require("../conection/config.js");
+/* const mysql = require("mysql");
+ */const config = require("../conection/config.js");
 
-const db = mysql.createConnection({
+/* const db = mysql.createConnection({
     host: config.host,
     user: config.user,
     password: config.password,
     database: config.database,
-});
+}); 
 
 const getUser = async () => {
     try {
@@ -31,3 +31,4 @@ module.exports = {
     getUser,
     newUser,
 };
+*/

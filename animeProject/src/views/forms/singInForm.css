@@ -6,3 +6,11 @@
     height: 400px;
     width: 400px;
 }
+
+.errorMsg{
+    border: solid red;
+    background-color: rgba(253, 81, 81, 0.582);
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
