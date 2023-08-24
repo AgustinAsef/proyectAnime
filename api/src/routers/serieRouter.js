@@ -3,20 +3,22 @@ const { newSerie, getSeries } = require("../controllers/seriesControler.js");
 
 const serieRouter = Router();
 
-serieRouter.get("/", async (req, res) => {
-    const userId = req.body;
+serieRouter.post("/:serieName/:userId/:caps", async (req, res) => {
+    const serieName = req.params.email.slice(1);
+    const userId = req.params.password.slice(1);
+    const caps = req.params.name.slice(1);
     try {
-        let data = await getSeries(userId);
-        res.status(200).send(data);
+        let createNewSerie = await newSerie(serieName, userId, caps);
+        res.status(200).send(createNewSerie);
     } catch (error) {
-        res.status(400).send(error);
+        res.status(400).send(error.message);
     }
 });
 
-serieRouter.post("/", async (req, res) => {
+serieRouter.delete("/:serieId", async (req, res) => {
     const { serieName, etc } = req.body;
     try {
-        let createNewSerie = await newSerie(serieName, etc);
+        let createNewSerie = await deleteSeroe(serieName, etc);
         res.status(200).send(createNewSerie);
     } catch (error) {
         res.status(400).send(error.message);

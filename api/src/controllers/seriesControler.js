@@ -1,17 +1,23 @@
-const axios = require("axios");
-const mysql = require('mysql')
-const {sequelize} = require("sequelize")
-const config = require ('../conection/config.js')
 
+const Cap = require("../models/chapters.js");
+const Serie = require("../models/serie.js");
 
-const getSeries = async (user) => {
-    let series = await db.query('select * from series')
-    return series
+const newSerie = async (serieName, userId, caps) => {
+    console.log(serieName, userId, caps);
+    let newSerie = await Serie.create({serieName: serieName, createdBy: userId})
+    for (let i = 1; i < caps; i++) {
+        Cap.create({isCheck: false, serieId: newSerie.id})
+    }
 };
 
-const newSerie = async (user) => {
-    await db.query('insert into series (serieName) values(?)');
-    await db.query('insert into capitulos (name) values(?)')
+const updateCaps = async (capId, isCheck) => {
+    let update = await Cap.update({ isCheck: !isCheck },{ where: { id: capId } });
+    console.log(update);
 };
 
-module.exports = {newSerie, getSeries};
+const deletCaps = async (capId) => {
+    let update = await Cap.drop({ where: { id: capId } });
+    console.log(update);
+};
+
+module.exports = {newSerie, updateCaps, deletCaps};

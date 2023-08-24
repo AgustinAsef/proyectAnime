@@ -11,8 +11,7 @@ const sequelize = new Sequelize(
     sqlConfig.password,
     {
         host: sqlConfig.host,
-        dialect:
-            'mysql',
+        dialect:'mysql',
     }
 );
 
