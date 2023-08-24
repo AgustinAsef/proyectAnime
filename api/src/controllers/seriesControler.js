@@ -1,14 +1,9 @@
 const axios = require("axios");
-/* const mysql = require('mysql')
- */const config = require ('../conection/config.js')
+const mysql = require('mysql')
+const {sequelize} = require("sequelize")
+const config = require ('../conection/config.js')
 
-/* const db = mysql.createConnection({
-    host: config.host,
-    user: config.user,
-    password: config.password,
-    database: config.database
-})
- */
+
 const getSeries = async (user) => {
     let series = await db.query('select * from series')
     return series

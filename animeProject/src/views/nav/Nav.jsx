@@ -13,11 +13,11 @@ function Nav() {
  */}                </Link>
             </div>
             <div className="m">
-                <Link className="m">
+                <Link className="m" to={"/singin"}>
                     <button className="button">Sing In</button>   
                 </Link>
                 <Link>
-                    <button className="button">Log In</button>
+                    <button className="button" to={"/"}>Log In</button>
                 </Link>
             </div>
         </div>

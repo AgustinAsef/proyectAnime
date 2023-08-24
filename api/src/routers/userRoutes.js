@@ -4,7 +4,7 @@ const { getUser, newUser } = require("../controllers/userControlers.js");
 const { json } = require("body-parser");
 
 const userRouter = Router();
-const data = {
+/* const data = {
     id: 1,
     userName: "agustin",
     userMail: ":agustin@gmail.com",
@@ -231,15 +231,15 @@ const data = {
         },
     ],
 };
-
+ */
 userRouter.get("/:email/:password", async (req, res) => {
-    const userEmail = req.params.email;
-    const userPassword = req.params.password;
+    const userEmail = req.params.email.slice(1);
+    const userPassword = req.params.password.slice(1);
     console.log(userEmail, userPassword);
     if (userEmail && userPassword) {
       try {
         let dataDB = getUser(userEmail, userPassword)
-        res.status(200).send(data);
+        res.status(200).send(dataDB);
       } catch (error) {
         if (error.response) {
           res.status(400).send(error.response.data);

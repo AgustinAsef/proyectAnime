@@ -1,29 +1,27 @@
-const axios = require("axios");
-/* const mysql = require("mysql");
- */const config = require("../conection/config.js");
+const User = require("../models/usuarios.js");
 
-/* const db = mysql.createConnection({
-    host: config.host,
-    user: config.user,
-    password: config.password,
-    database: config.database,
-}); 
+const getUser = async (userEmail, userPassword) => {
+    console.log(userEmail);
+    console.log(userPassword);
 
-const getUser = async () => {
-    try {
-        let user = await axios.get(`${user}`);
-        return user;
-    } catch (error) {
-        console.log(error);
-    }
+    let user = await User.findOne({where:{email: userEmail, password: userPassword}})
+    if (user == null) {
+        console.log('no encontrado');
+        return(error)
+    }else{
+        console.log(user);
+        
+        
+        }
 };
 
-const newUser = async () => {
-    try {
-        await db.query("insert into users ( name ) values (?)");
-        return "Usuario creado con exito.";
-    } catch (error) {
-        console.log(error);
+const newUser = async (userEmail, userPassword, userName) => {
+    const date = new Date
+    let user = User.findOne({where:{email: userEmail}})
+    if (user == null) {
+        User.create({email: userEmail, password: userPassword, userName: userName, createdAt: date, updateAt: date})
+    }else{
+        'este usuario ya existe'
     }
 };
 
@@ -31,4 +29,3 @@ module.exports = {
     getUser,
     newUser,
 };
-*/
