@@ -6,7 +6,7 @@ const Chapter = require ("../models/chapters.js");
 
 const getUser = async (userEmail, userPassword) => {
 
-   let user = await User.findOne({
+   let userWithSerie = await User.findOne({
         attributes: ['id', 'email', 'userName'],
          include: [
           {
@@ -21,33 +21,28 @@ const getUser = async (userEmail, userPassword) => {
             ]
           }
         ],
-        //hacer 2 consultas es una opcion
         where: {email:userEmail, password:userPassword}
       })
-      .then(user => {
-        if (user) {
-            
-          console.log('Usuario encontrado:', user.toJSON());
-          return user
-        } else {
-          console.log('Usuario no encontrado.');
+      if (userWithSerie == null) {
+        let onlyUser = await User.findOne({where: {email:userEmail, password:userPassword}})
+        if (onlyUser == null) {
+          return(error)
+        }else{
+          return(onlyUser)
         }
-      })
-      .catch(error => {
-        console.error('Error al buscar usuario:', error);
-      });
+      } else {
+        return(userWithSerie)
+      }
 };
 
 const newUser = async (userEmail, userPassword, userName) => {
     console.log(userEmail, userPassword,userName);
     let user = await User.findOne({where:{email: userEmail}})
-    console.log(user, 'este es el user');
     if (user == null) {
-        console.log('usuario creado con exito');
         let newUser = await User.create({email:userEmail, password:userPassword, userName:userName})
-        console.log(newUser);
+        return(newUser)
     }else{
-        console.log('este usuario ya existe');        
+        return(error)        
     }
 };
 

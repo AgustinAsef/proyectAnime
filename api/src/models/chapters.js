@@ -2,8 +2,8 @@ const { DataTypes } = require("sequelize");
 const sequelize = require("sequelize")
 const sqlConfig = require("../conection/sequelizeConetion");
 
-const Cap = sqlConfig.define(
-    "Cap",
+const cap = sqlConfig.define(
+    "cap",
     {
         id: {
             type: DataTypes.INTEGER,
@@ -40,4 +40,4 @@ const Cap = sqlConfig.define(
         ],
     }
 );
-module.exports = Cap;
+module.exports = cap;

@@ -1,0 +1,12 @@
+.logInDivContainer{
+  max-height: 1080px;
+  max-width: 1920px;
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logInContainer{
+  background-color: rgba(0, 0, 0, 0.8);
+}

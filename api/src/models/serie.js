@@ -3,8 +3,8 @@ const sequelize = require("sequelize")
 const sqlConfig = require("../conection/sequelizeConetion");
 const Cap = require("./chapters");
 
-const Serie = sqlConfig.define(
-    "Serie",
+const serie = sqlConfig.define(
+    "serie",
     {
         id: {
             type: DataTypes.INTEGER,
@@ -26,7 +26,7 @@ const Serie = sqlConfig.define(
     },
     {
         sequelize,
-        modelName: "Serie",
+        modelName: "serie",
         tableName: "series",
         timestamps: false,
         indexes: [
@@ -41,9 +41,9 @@ const Serie = sqlConfig.define(
     }
 );
 
-Serie.hasMany(Cap, {
+serie.hasMany(Cap, {
     foreignKey: 'serieId',
   });
 
 
-module.exports = Serie;
+module.exports = serie;

@@ -1,0 +1,68 @@
+:root {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  font-size: large;
+
+  color-scheme: light dark;
+  color: rgb(255, 255, 255);
+  background-color: #3a3a3a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  
+  background-image:url("./imgs/cieloconubesestiloanime.png");
+  background-repeat:repeat;
+  background-position:center;
+  background-size:cover;
+}
+
+body{
+  margin: 0;
+  display: flex;
+/*   min-width: 320px;
+  min-height: 100vh;
+ */}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.button {
+  border: solid #ffffff;
+
+  background-color: transparent;
+
+  font-size: medium;
+  font-weight: 600;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  height: 50px;
+}
+
+.button:hover {  
+  -webkit-box-shadow: 5px 5px 0px -1px #7ed6f3;
+  -moz-box-shadow: 5px 5px 0px -1px #7ed6f3;
+  box-shadow: 5px 5px 0px -1px #7ed6f3;
+  translate: -2px -2px;
+}
+
+.button:active {
+  -webkit-box-shadow: 1px 1px 0px 1px #7ed6f3;
+  -moz-box-shadow: 1px 1px 0px 1px #7ed6f3;
+  box-shadow: 1px 1px 0px 1px #7ed6f3;
+  translate: 1px 1px;
+}
+
+.notShow{
+  display:none;
+}
+
+.show{
+  display:grid;
+}

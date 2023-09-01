@@ -1,0 +1,39 @@
+.navDivContainer{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(3, 3, 3, 0.8);
+
+}
+
+.navTittle{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.buttonNav{
+  color: white;
+  border: solid rgb(255, 255, 255);
+
+  background-color: rgba(0, 0, 0, 0);
+
+  font-size: medium;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  height: 50px;
+}
+
+.buttonNav:hover {  
+  -webkit-box-shadow: 5px 5px 0px -1px #7ed6f3;
+  -moz-box-shadow: 5px 5px 0px -1px #7ed6f3;
+  box-shadow: 5px 5px 0px -1px #7ed6f3;
+  translate: -2px -2px;
+}
+
+.buttonNav:active {
+  -webkit-box-shadow: 1px 1px 0px 1px #7ed6f3;
+  -moz-box-shadow: 1px 1px 0px 1px #7ed6f3;
+  box-shadow: 1px 1px 0px 1px #7ed6f3;
+  translate: 1px 1px;
+}

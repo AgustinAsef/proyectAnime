@@ -1,0 +1,75 @@
+.generalHomeDivCOntainer {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.newSerieFormTittleContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.newSerieFormInputs {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.serieContainer {
+  border-top: solid white 1px;
+  margin-bottom: 1rem;
+}
+
+.serieTittleContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.checkboxLabel {
+  display: flex;
+  cursor: pointer;
+}
+
+.checkInput {
+  display: none;
+}
+
+.customInput {
+  border: solid #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: transparent;
+
+  font-size: medium;
+  font-weight: 700;
+
+
+  cursor: pointer;
+
+  height: 40px;
+  width: 40px;
+}
+
+.checkImage {
+  width: 35px;
+  height: 35px;
+  display: none;
+}
+
+.checkInput:checked ~ .customInput .checkImage {
+  display: inline;
+}
+
+.checkInput:checked ~ .customInput .inputText {
+  display: none;
+}
+
+.capsContainer{
+  display: flex;
+  justify-content: center;
+}

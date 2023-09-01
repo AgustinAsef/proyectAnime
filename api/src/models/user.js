@@ -3,7 +3,7 @@ const sequelize = require ("sequelize")
 const sqlConfig = require ("../conection/sequelizeConetion");
 const Serie = require("./serie");
 
-const User = sqlConfig.define("User", {
+const user = sqlConfig.define("user", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -25,7 +25,7 @@ const User = sqlConfig.define("User", {
   },
   {
     sequelize,
-    modelName: 'User',
+    modelName: 'user',
     tableName: 'users',
     timestamps: false,
     indexes: [
@@ -40,8 +40,8 @@ const User = sqlConfig.define("User", {
     ],
   });
   
-  User.hasMany(Serie, {
+  user.hasMany(Serie, {
     foreignKey: 'createdBy',
   });
 
-module.exports = User
+module.exports = user
