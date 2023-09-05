@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("sequelize")
 const sqlConfig = require("../conection/sequelizeConetion");
-const Cap = require("./chapters");
+const cap = require("./cap");
 
 const serie = sqlConfig.define(
     "serie",
@@ -41,7 +41,7 @@ const serie = sqlConfig.define(
     }
 );
 
-serie.hasMany(Cap, {
+serie.hasMany(cap, {
     foreignKey: 'serieId',
   });
 

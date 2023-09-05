@@ -1,0 +1,10 @@
+.serieContainer {
+  border-top: solid white 1px;
+  margin-bottom: 1rem;
+}
+
+.serieTittleContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

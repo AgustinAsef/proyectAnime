@@ -1,7 +1,7 @@
-const { DataTypes, Model } = require ("sequelize");
+const { DataTypes } = require ("sequelize");
 const sequelize = require ("sequelize")
 const sqlConfig = require ("../conection/sequelizeConetion");
-const Serie = require("./serie");
+const serie = require("./serie");
 
 const user = sqlConfig.define("user", {
     id: {
@@ -40,7 +40,7 @@ const user = sqlConfig.define("user", {
     ],
   });
   
-  user.hasMany(Serie, {
+  user.hasMany(serie, {
     foreignKey: 'createdBy',
   });
 

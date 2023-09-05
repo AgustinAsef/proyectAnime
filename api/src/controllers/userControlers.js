@@ -1,7 +1,7 @@
 const Sequelize = require ("../conection/sequelizeConetion.js") ;
 const User = require("../models/user.js");
 const Serie = require ("../models/serie.js")
-const Chapter = require ("../models/chapters.js");
+const Caps = require ("../models/cap.js");
 
 
 const getUser = async (userEmail, userPassword) => {
@@ -13,10 +13,10 @@ const getUser = async (userEmail, userPassword) => {
             model: Serie,
             attributes: ['id', 'serieName'],
             where: { createdBy: Sequelize.col('User.id') },
-           include: [
+            include: [
               {
-                model: Chapter,
-                attributes: ['id', 'isCheck'],
+                model: Caps,
+                attributes: ['id', 'isCheck', 'capNum'],
               }
             ]
           }

@@ -1,5 +1,5 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require("sequelize")
+const sequelize = require("sequelize");
 const sqlConfig = require("../conection/sequelizeConetion");
 
 const cap = sqlConfig.define(
@@ -15,6 +15,10 @@ const cap = sqlConfig.define(
             allowNull: false,
             defaultValue: 0,
         },
+        capNum: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
         serieId: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -26,8 +30,8 @@ const cap = sqlConfig.define(
     },
     {
         sequelize,
-        modelName: "Chapter",
-        tableName: "chapters",
+        modelName: "Caps",
+        tableName: "caps",
         timestamps: false,
         indexes: [
             {

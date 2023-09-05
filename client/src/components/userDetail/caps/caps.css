@@ -1,3 +1,9 @@
+.capsContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .checkboxLabel {
   display: flex;
   cursor: pointer;
@@ -38,9 +44,4 @@
 
 .checkInput:checked ~ .customInput .inputText {
   display: none;
-}
-
-.capsContainer{
-  display: flex;
-  justify-content: center;
 }
