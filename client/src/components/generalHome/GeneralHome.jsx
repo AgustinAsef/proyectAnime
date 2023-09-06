@@ -1,9 +1,199 @@
 import { useState } from "react";
 import Nav from "../nav/Nav";
+import checkImg from "../../imgs/check.png"
 import "./generalHome.css";
 
 function GeneralHome() {
   const [show, setShow] = useState("notShow");
+  const series = ([
+        {
+          "id": 93,
+          "serieName": "Naruto",
+          "caps": [
+            {
+              "id": 1994,
+              "isCheck": 0,
+              "capNum": 1
+            },
+            {
+              "id": 1995,
+              "isCheck": 0,
+              "capNum": 2
+            },
+            {
+              "id": 1996,
+              "isCheck": 0,
+              "capNum": 3
+            },
+            {
+              "id": 1997,
+              "isCheck": 0,
+              "capNum": 4
+            },
+            {
+              "id": 1998,
+              "isCheck": 0,
+              "capNum": 5
+            },
+            {
+              "id": 1999,
+              "isCheck": 0,
+              "capNum": 6
+            },
+            {
+              "id": 2000,
+              "isCheck": 0,
+              "capNum": 7
+            },
+            {
+              "id": 2001,
+              "isCheck": 0,
+              "capNum": 8
+            },
+            {
+              "id": 2002,
+              "isCheck": 0,
+              "capNum": 9
+            },
+            {
+              "id": 2003,
+              "isCheck": 0,
+              "capNum": 10
+            },
+            {
+              "id": 2004,
+              "isCheck": 0,
+              "capNum": 11
+            },
+            {
+              "id": 2005,
+              "isCheck": 0,
+              "capNum": 12
+            },
+            {
+              "id": 2006,
+              "isCheck": 0,
+              "capNum": 13
+            },
+            {
+              "id": 2007,
+              "isCheck": 0,
+              "capNum": 14
+            },
+            {
+              "id": 2008,
+              "isCheck": 0,
+              "capNum": 15
+            }
+          ]
+        },
+        {
+          "id": 94,
+          "serieName": "Boruto",
+          "caps": [
+            {
+              "id": 2009,
+              "isCheck": 0,
+              "capNum": 1
+            },
+            {
+              "id": 2010,
+              "isCheck": 0,
+              "capNum": 2
+            },
+            {
+              "id": 2011,
+              "isCheck": 0,
+              "capNum": 3
+            },
+            {
+              "id": 2012,
+              "isCheck": 0,
+              "capNum": 4
+            },
+            {
+              "id": 2013,
+              "isCheck": 0,
+              "capNum": 5
+            },
+            {
+              "id": 2014,
+              "isCheck": 0,
+              "capNum": 6
+            },
+            {
+              "id": 2015,
+              "isCheck": 0,
+              "capNum": 7
+            },
+            {
+              "id": 2016,
+              "isCheck": 0,
+              "capNum": 8
+            },
+            {
+              "id": 2017,
+              "isCheck": 0,
+              "capNum": 9
+            },
+            {
+              "id": 2018,
+              "isCheck": 0,
+              "capNum": 10
+            },
+            {
+              "id": 2019,
+              "isCheck": 0,
+              "capNum": 11
+            },
+            {
+              "id": 2020,
+              "isCheck": 0,
+              "capNum": 12
+            },
+            {
+              "id": 2021,
+              "isCheck": 0,
+              "capNum": 13
+            },
+            {
+              "id": 2022,
+              "isCheck": 0,
+              "capNum": 14
+            },
+            {
+              "id": 2023,
+              "isCheck": 0,
+              "capNum": 15
+            },
+            {
+              "id": 2024,
+              "isCheck": 0,
+              "capNum": 16
+            },
+            {
+              "id": 2025,
+              "isCheck": 0,
+              "capNum": 17
+            },
+            {
+              "id": 2026,
+              "isCheck": 0,
+              "capNum": 18
+            },
+            {
+              "id": 2027,
+              "isCheck": 0,
+              "capNum": 19
+            },
+            {
+              "id": 2028,
+              "isCheck": 0,
+              "capNum": 20
+            }
+          ]
+        }
+  ])
 
   function changeDisplay() {
     if (show == "notShow") {
@@ -12,18 +202,17 @@ function GeneralHome() {
       setShow("notShow");
     }
   }
+
   return (
     <>
       <Nav />
-      <div className="generalHomeDivCOntainer">
-        <h2>¡ Hola otra vez usuario !</h2>
-        <h3>Lo que podras hacer en esta pagina es lo siguiente:</h3>
+      <div className="newSerieDivContainer p">
+      <h2>¡ Hola otra vez usuario !</h2>
         <h3>
-          suponte que estas por ver Naruto (por ejemplo), dale al + para
-          agregarlo
+          En esta pagina podras agregar las series que vas a ver y checkear los
+          capitulos que has visto para tenerlas al dia, tal y como se muestra a continuecion.
         </h3>
-        <div>
-          <div className="newSerieFormContainer p">
+        <div className="p">
             <div className="newSerieFormTittleContainer">
               <button className="button" onClick={changeDisplay}>
                 Nueva Serie
@@ -59,105 +248,28 @@ function GeneralHome() {
                 </div>
               </form>
             </div>
-          </div>
-          <div className="serieContainer p">
-            <div className="serieTittleContainer">
-              <h2>Naruto</h2>
-              <button className="button">X</button>
-            </div>
-            <div className="capsContainer">
-              <label className="checkboxLabel m">
-                <input type="checkbox" name="cap1" id="cap1" className="checkInput"/>
-                <div className="customInput">
-                  <span className="input-text">Cap.</span>
-                  <span className="input-text"></span>
-                  <img className="checkImage" alt="check Image" />
-                </div>
-              </label>
-              <label className="checkboxLabel m">
-                <input type="checkbox" name="cap2" id="cap2" className="checkInput"/>
-                <div className="customInput">
-                  <span className="input-text">Cap.</span>
-                  <span className="input-text"></span>
-                  <img className="checkImage" alt="check Image" />
-                </div>
-              </label>
-              <label className="checkboxLabel m">
-                <input type="checkbox" name="cap3" id="cap3" className="checkInput"/>
-                <div className="customInput">
-                  <span className="input-text">Cap.</span>
-                  <span className="input-text"></span>
-                  <img className="checkImage" alt="check Image" />
-                </div>
-              </label>
-              <label className="checkboxLabel m">
-                <input type="checkbox" name="cap4" id="cap4" className="checkInput"/>
-                <div className="customInput">
-                  <span className="input-text">Cap.</span>
-                  <span className="input-text"></span>
-                  <img className="checkImage" alt="check Image" />
-                </div>
-              </label>
-              <label className="checkboxLabel m">
-                <input type="checkbox" name="cap5" id="cap5" className="checkInput"/>
-                <div className="customInput">
-                  <span className="input-text">Cap.</span>
-                  <span className="input-text"></span>
-                  <img className="checkImage" alt="check Image" />
-                </div>
-              </label>
-            </div>
-          </div>
-          <div className="serieContainer p">
-            <div className="serieTittleContainer">
-              <h2>One peace</h2>
-              <button className="button">X</button>
-            </div>
-            <div className="capsContainer">
-              <label className="checkboxLabel m">
-                <input type="checkbox" name="cap1" id="cap1" className="checkInput"/>
-                <div className="customInput">
-                  <span className="input-text">Cap.</span>
-                  <span className="input-text"></span>
-                  <img className="checkImage" alt="check Image" />
-                </div>
-              </label>
-              <label className="checkboxLabel m">
-                <input type="checkbox" name="cap2" id="cap2" className="checkInput"/>
-                <div className="customInput">
-                  <span className="input-text">Cap.</span>
-                  <span className="input-text"></span>
-                  <img className="checkImage" alt="check Image" />
-                </div>
-              </label>
-              <label className="checkboxLabel m">
-                <input type="checkbox" name="cap3" id="cap3" className="checkInput"/>
-                <div className="customInput">
-                  <span className="input-text">Cap.</span>
-                  <span className="input-text"></span>
-                  <img className="checkImage" alt="check Image" />
-                </div>
-              </label>
-              <label className="checkboxLabel m">
-                <input type="checkbox" name="cap4" id="cap4" className="checkInput"/>
-                <div className="customInput">
-                  <span className="input-text">Cap.</span>
-                  <span className="input-text"></span>
-                  <img className="checkImage" alt="check Image" />
-                </div>
-              </label>
-              <label className="checkboxLabel m">
-                <input type="checkbox" name="cap5" id="cap5" className="checkInput"/>
-                <div className="customInput">
-                  <span className="input-text">Cap.</span>
-                  <span className="input-text"></span>
-                  <img className="checkImage" alt="check Image" />
-                </div>
-              </label>
-            </div>
-          </div>
         </div>
       </div>
+      {series.map((serie)=>(
+              <div className="serieContainer p" key={serie.id}>
+                <div className="serieTittleContainer">
+                  <h2>{serie.serieName}</h2>
+                  <button className="button">X</button>
+                </div>
+                <div className="capsContainer">
+                  {serie.caps.map((cap)=>(
+                    <label className="checkboxLabel m" key={cap.id}>
+                      <input type="checkbox" id={cap.id} className="checkInput"/>
+                      <div className="customInput">
+                        <span className="inputText">Cap</span>
+                        <span className="inputText">{cap.capNum}</span>
+                        <img className="checkImage" alt="check Image" src={checkImg}/>
+                      </div>
+                    </label>                    
+                  ))}
+                </div>
+              </div>
+      ))}
     </>
   );
 }

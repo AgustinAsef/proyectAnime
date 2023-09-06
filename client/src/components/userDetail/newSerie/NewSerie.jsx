@@ -40,7 +40,8 @@ function NewSerie(data) {
     }
 
     return (
-        <div className="newSerieFormContainer p">
+        <div>
+            <div className="newSerieFormContainer">
             <div className="newSerieFormTittleContainer">
                 <button
                     className="button buttonWatchSeason"
@@ -81,6 +82,7 @@ function NewSerie(data) {
                     </div>
                 </div>
             </form>
+            </div>
             <div>
                 <Series seriesData={serieData} />
             </div>

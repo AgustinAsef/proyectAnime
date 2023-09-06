@@ -1,5 +1,5 @@
 import { useState } from "react";
-import checkimg from "../../../imgs/linkedin.png";
+import checkimg from "../../../imgs/check.png";
 import "./caps.css";
 import axios from "axios";
 

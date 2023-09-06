@@ -1,6 +1,25 @@
-.serieContainer {
-  border-top: solid white 1px;
+.serieDivContainer{
+  margin: 2rem;
+}
+
+.serieTextAddContainer{
+  padding: 2rem;
   margin-bottom: 1rem;
+
+  background-color: rgba(0, 0, 0, 0.801);
+
+  border-radius: 16px;
+  border-top: solid white 3px;
+}
+
+.serieContainer {
+  padding: 2rem;
+  margin-bottom: 1rem;
+
+  background-color: rgba(0, 0, 0, 0.801);
+
+  border-radius: 16px;
+  border-top: solid white 3px;
 }
 
 .serieTittleContainer {

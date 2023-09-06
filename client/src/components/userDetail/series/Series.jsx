@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Caps from "../caps/Caps";
 
+import "./serie.css"
+
 
 function Series(seriesData) {
 
@@ -25,10 +27,10 @@ function Series(seriesData) {
     },[seriesData])
 
     if (series == undefined) {
-      return <div>Agrega series para verlas</div>;
+      return <div className="serieDivContainer serieTextAddContainer">Agrega series para verlas</div>;
     }else{
              return (
-            <>
+            <div className="serieDivContainer">
                 {series.map((serie) => (
                     <div
                         key={serie.id + serie.serieName}
@@ -47,7 +49,7 @@ function Series(seriesData) {
                         </div>
                     </div>
                 ))}
-            </>
+            </div>
         );
     }
 }

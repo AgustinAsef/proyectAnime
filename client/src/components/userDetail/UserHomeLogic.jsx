@@ -8,10 +8,8 @@ function UserHomeLogic(data) {
     return (
         <>
             <Nav />
-            <div className="generalHomeDivCOntainer">
-                <UserHome userData={userData} />
-                <NewSerie data={data.data} />
-            </div>
+            <UserHome userData={userData} />
+            <NewSerie data={data.data} />
         </>
     );
 }
