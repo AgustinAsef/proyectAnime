@@ -8,25 +8,23 @@ function SingInForm() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [confirmPassword, setConfirmPassword] = useState();
-    const [errorConfirmPassword, setErrorConfirmPassword] =
-        useState("notShow errorMsg");
+    const [errorConfirmPassword, setErrorConfirmPassword] = useState("notShow errorMsg");
 
-    function formSubmit(e) {
+        function formSubmit(e) {   // comprueba que los estados que almacenan las contrasenas sean iguales 
         e.preventDefault();
         if (password !== confirmPassword) {
             setErrorConfirmPassword("show errorMsg");
-        } else {
+        } else {   //si las contrasenas no son diferentes, manda la informacion a la api que crea el usuario en la base de datos
             setErrorConfirmPassword("notShow errorMsg");
-            axios({
+            axios({       
                 method: "post",
                 url: `http://localhost:3030/user/:${email}/:${password}/:${name}`,
-            })
-                .then(() => {
+            }).then(() => {
                     alert("usuario creado con exito");
-                })
-                .catch(() => {
+            })
+            .catch(() => {
                     alert("no se ha podido crear el usuario o este ya existe");
-                });
+            });
         }
     }
 
@@ -102,4 +100,5 @@ function SingInForm() {
         </div>
     );
 }
+
 export default SingInForm;

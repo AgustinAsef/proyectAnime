@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import "./mesagge.css";
 import gitImg from '../../imgs/github-mark-white.png'
 import linkedin from '../../imgs/linkedin.png'
+import "./mesagge.css";
+
 function FirstMessage() {
   return (
     <>

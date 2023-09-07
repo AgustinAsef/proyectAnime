@@ -1,10 +1,10 @@
-import { Routes, Route } from 'react-router-dom'
-import './App.css'
-
 import LogInForm from './components/userDetail/logInForm/LogInForm'
 import SingInForm from './components/singInForm/SingInForm'
 import Message from './components/message/Message'
 import GeneralHome from './components/generalHome/GeneralHome'
+
+import { Routes, Route } from 'react-router-dom' //majeno de rutas con react Router
+import './App.css'
 
 function App() {
 

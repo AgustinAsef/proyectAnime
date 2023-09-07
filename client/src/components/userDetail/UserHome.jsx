@@ -1,7 +1,8 @@
 import "./userHome.css"
 function UserHome(userData) {
 
-  const userName = userData.userData
+  const userName = userData.userData //recibe la informacion del usuario y muesta el nombre nomas
+
   return(
   <div className="userHomeDivCOntainer">
     <div className="newSerieFormTittleContainer">

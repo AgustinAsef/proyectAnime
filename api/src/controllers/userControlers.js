@@ -6,7 +6,7 @@ const Caps = require ("../models/cap.js");
 
 const getUser = async (userEmail, userPassword) => {
 
-   let userWithSerie = await User.findOne({
+   let userWithSerie = await User.findOne({ //  recibe el id y la contrasena del usuario y lo busca con sus series
         attributes: ['id', 'email', 'userName'],
          include: [
           {
@@ -23,7 +23,7 @@ const getUser = async (userEmail, userPassword) => {
         ],
         where: {email:userEmail, password:userPassword}
       })
-      if (userWithSerie == null) {
+      if (userWithSerie == null) { //  si el usuario no tiene series asociadas trae solo los datos del usuario
         let onlyUser = await User.findOne({where: {email:userEmail, password:userPassword}})
         if (onlyUser == null) {
           return(error)
@@ -35,7 +35,7 @@ const getUser = async (userEmail, userPassword) => {
       }
 };
 
-const newUser = async (userEmail, userPassword, userName) => {
+const newUser = async (userEmail, userPassword, userName) => { //  agrega un usuario a la base de datos
     console.log(userEmail, userPassword,userName);
     let user = await User.findOne({where:{email: userEmail}})
     if (user == null) {

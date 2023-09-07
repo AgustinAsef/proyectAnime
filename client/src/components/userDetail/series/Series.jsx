@@ -5,28 +5,28 @@ import Caps from "../caps/Caps";
 import "./serie.css"
 
 
-function Series(seriesData) {
+function Series(seriesData) { //recibe y mapea las series
 
-  const [series, setSerie] = useState() ;
+  const [series, setSerie] = useState();
 
-    async function deleteSerie(id) {
+    async function deleteSerie(id) { //  recibe el id de la serie
         try {
-            await axios({
+            await axios({ //  el id se utiliza aqui para eliminarlo de la base de datos
                 method: "delete",
                 url: `http://localhost:3030/series/:${id}`,
             });
-            let newSeriesArray = series.filter(serie => serie.id !== id)
+            let newSeriesArray = series.filter(serie => serie.id !== id) // aqui el id se utiliza para eliminarlo del array que se muestra en pantalla
             setSerie(newSeriesArray)
         } catch (error) {
             alert(error);
         }
     }
 
-    useEffect(()=>{
+    useEffect(()=>{ //  setea el array de las series con la informacion recibida del componente padre
       setSerie(seriesData.seriesData)
     },[seriesData])
 
-    if (series == undefined) {
+    if (series == undefined) { // si no hay series para mostrar muestra el mensaje
       return <div className="serieDivContainer serieTextAddContainer">Agrega series para verlas</div>;
     }else{
              return (

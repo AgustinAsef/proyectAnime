@@ -5,7 +5,7 @@ import axios from "axios";
 
 function Caps(caps) {
     
-    let reorderCaps = caps.caps.sort((a, b) => {
+    let reorderCaps = caps.caps.sort((a, b) => { //  ordena el array segun suus numeros para que se muestren los capitulos ordenados
         if (a.capNum < b.capNum) {
             return -1;
         }
@@ -16,7 +16,8 @@ function Caps(caps) {
     });
 
     const [allCaps, setAllCaps] = useState(reorderCaps);
-    const toggleCheck = (id) => {
+
+    const toggleCheck = (id) => { //  modifica el estado del isCheck en los datos
         setAllCaps((changeCap) =>
             changeCap.map((cap) =>
                 cap.id === id ? { ...cap, isCheck: cap.isCheck === 1 ? 0 : 1 } : cap
@@ -24,7 +25,7 @@ function Caps(caps) {
         );
     };
 
-    async function changeCaps(id, state) {
+    async function changeCaps(id, state) { //  manda el cambio de estado check al servidor
         try {
             await axios({
                 method: "patch",

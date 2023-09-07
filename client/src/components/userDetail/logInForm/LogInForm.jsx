@@ -10,20 +10,20 @@ function LogInForm() {
 
   const [data, setData] = useState();
 
-  async function logInputs(e) {
-    e.preventDefault();
+  async function logInputs(e) { //  manda al servidor el email y la contrasena para comprobarlos
+    e.preventDefault(); 
     try {
       const data = await axios({
         method: "get",
         url: `http://localhost:3030/user/:${email}/:${password}`,
       });
-      setData(data.data)
+      setData(data.data) //  en caso de que el email y la contrasena sean correctos setea la informacion en un estado
     } catch (error) {
      alert('mail o contrasena incorrectos')
     }
   }
 
-  if (!data) {
+  if (!data) { //  en caso de que no haya informacion se muestra el formulario, si hay informacion se muestra el desgloce de las series
     return (
       <div>
         <Nav />

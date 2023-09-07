@@ -13,7 +13,7 @@ function NewSerie(data) {
     const [show, setShow] = useState("notShow");
 
 
-    function showNewSerieForm() {
+    function showNewSerieForm() { //  cambia la visibilidad del formulario alterando el estado
         if (show == "show") {
             setShow("notShow");
         } else {
@@ -21,17 +21,17 @@ function NewSerie(data) {
         }
     }
 
-    async function sendNewSerie(e) {
-        e.preventDefault();
+    async function sendNewSerie(e) { //  envia al servidor la informacion de el nombre de la serie, la cantidad de capitulos y el id del usuario      
+        e.preventDefault();          //  para crear una nueva serie
         try {
             let newSerie = await axios({
                 method: "post",
                 url: `http://localhost:3030/series/:${serieName}/:${caps}/:${userId}`,
             });
             showNewSerieForm()
-            if (serieData === undefined) {
+            if (serieData === undefined) { //  si el array de la informacion esta vacio agrega la respuesta del servidor
               setSerieData([newSerie.data]);
-            }else{
+            }else{ //  si no, suma al array de la informacion la data recibida del servidor
               setSerieData(serieData.concat(newSerie.data));           
             }
         } catch (error) {
