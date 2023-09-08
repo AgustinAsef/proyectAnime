@@ -13,8 +13,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/", router);
 
-app.listen(PORT, async () => {
-    //  coneccion con el servidor y levantamiento en el puerto
+app.listen(PORT, async () => { //  coneccion con el servidor y levantamiento en el puerto
     try {
         await sequelize.authenticate();
         console.log(`Listen PORT: ${PORT}`);
