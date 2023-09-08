@@ -8,11 +8,12 @@ function FirstMessage() {
     <>
       <div className="messageDivContainer">
         <div className="messageContainer m p">
-          <h1>Bienvenido a mi pagina</h1>
+          <h1>Bienvenido</h1>
           <p className="p m">
-            mi nombre es Agustin y esta pagina esta pensada para que puedas
+            Mi nombre es Agustin y esta pagina esta pensada para que puedas
             llevar al dia que capitulo de que serie estas viendo,
-            ya que algunas paginas de dudosa procedencia no tienen formas faciles de hacerlo
+            ya que algunas paginas de dudosa procedencia no tienen formas faciles de hacerlo.
+            Todavia estoy trabajando en algunas cosas, pero ya es utilizable.
           </p>
           <div>
             <p>dejo algunos links a mis cuentas personales:</p>
