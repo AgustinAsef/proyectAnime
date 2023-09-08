@@ -15,9 +15,9 @@ app.use("/", router);
 
 app.listen(PORT, async () => {
     //  coneccion con el servidor y levantamiento en el puerto
-    console.log(`Listen PORT: ${PORT}`);
     try {
         await sequelize.authenticate();
+        console.log(`Listen PORT: ${PORT}`);
     } catch (error) {
         console.log(error);
     }
