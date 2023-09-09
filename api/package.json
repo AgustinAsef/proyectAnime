@@ -12,6 +12,6 @@
     "vercel": "^32.2.0"
   },
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon ./src/index.js"
   }
 }
