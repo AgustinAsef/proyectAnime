@@ -13,6 +13,9 @@ app.use(express.json());
 app.use(cors());
 app.use("/", router);
 
+app.get("/", (req, res)=>{
+    res.status(200).send("api lista")
+})
 app.listen(PORT, async () => { //  coneccion con el servidor y levantamiento en el puerto
     try {
         await sequelize.authenticate();
