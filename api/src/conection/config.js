@@ -1,9 +1,9 @@
 const sqlConfig = {
-    host:'192.168.1.63',
-    user: 'remoteuser',
-    password: 'Frankie135',
-    port: '3306',
-    database: 'animeProject'
+    host: process.env.DBHost,
+    user: process.env.DBUser,
+    password: process.env.DBPassword,
+    port: process.env.DBPort,
+    database: process.env.DBName
   }
 
 module.exports = sqlConfig
