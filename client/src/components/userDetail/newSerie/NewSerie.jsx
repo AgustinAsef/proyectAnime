@@ -26,7 +26,7 @@ function NewSerie(data) {
         try {
             let newSerie = await axios({
                 method: "post",
-                url: `http://localhost:3030/series/:${serieName}/:${caps}/:${userId}`,
+                url: `https://proyectanime-production.up.railway.app/series/:${serieName}/:${caps}/:${userId}`,
             });
             showNewSerieForm()
             if (serieData === undefined) { //  si el array de la informacion esta vacio agrega la respuesta del servidor

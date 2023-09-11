@@ -18,7 +18,7 @@ function SingInForm() {
             setErrorConfirmPassword("notShow errorMsg");
             axios({       
                 method: "post",
-                url: `http://localhost:3030/user/:${email}/:${password}/:${name}`,
+                url: `https://proyectanime-production.up.railway.app/user/:${email}/:${password}/:${name}`,
             }).then(() => {
                     alert("usuario creado con exito");
             })

@@ -29,7 +29,7 @@ function Caps(caps) {
         try {
             await axios({
                 method: "patch",
-                url: `http://localhost:3030/series/:${id}/:${state}`,
+                url: `https://proyectanime-production.up.railway.app/series/:${id}/:${state}`,
             });
         } catch (error) {
             alert(error);

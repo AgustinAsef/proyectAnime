@@ -15,7 +15,7 @@ function LogInForm() {
     try {
       const data = await axios({
         method: "get",
-        url: `http://localhost:3030/user/:${email}/:${password}`,
+        url: `https://proyectanime-production.up.railway.app/user/:${email}/:${password}`,
       });
       setData(data.data) //  en caso de que el email y la contrasena sean correctos setea la informacion en un estado
     } catch (error) {

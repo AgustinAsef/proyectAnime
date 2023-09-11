@@ -13,7 +13,7 @@ function Series(seriesData) { //recibe y mapea las series
         try {
             await axios({ //  el id se utiliza aqui para eliminarlo de la base de datos
                 method: "delete",
-                url: `http://localhost:3030/series/:${id}`,
+                url: `https://proyectanime-production.up.railway.app/series/:${id}`,
             });
             let newSeriesArray = series.filter(serie => serie.id !== id) // aqui el id se utiliza para eliminarlo del array que se muestra en pantalla
             setSerie(newSeriesArray)
