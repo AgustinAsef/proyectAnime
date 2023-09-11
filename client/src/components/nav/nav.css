@@ -1,7 +1,7 @@
 .navDivContainer{
   display: flex;
   justify-content: space-between;
-  background-color: rgba(3, 3, 3, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 
 }
 
@@ -28,15 +28,15 @@
 }
 
 .buttonNav:hover {  
-  -webkit-box-shadow: 5px 5px 0px -1px  rgb(30, 196, 247);
-  -moz-box-shadow: 5px 5px 0px -1px  rgb(30, 196, 247);
-  box-shadow: 5px 5px 0px -1px  rgb(30, 196, 247);
+  -webkit-box-shadow: 5px 5px 0px -1px  rgb(30, 149, 247);
+  -moz-box-shadow: 5px 5px 0px -1px  rgb(30, 149, 247);
+  box-shadow: 5px 5px 0px -1px  rgb(30, 149, 247);
   translate: -2px -2px;
 }
 
 .buttonNav:active {
-  -webkit-box-shadow: 1px 1px 0px 1px  rgb(30, 196, 247);
-  -moz-box-shadow: 1px 1px 0px 1px  rgb(30, 196, 247);
-  box-shadow: 1px 1px 0px 1px  rgb(30, 196, 247);
+  -webkit-box-shadow: 1px 1px 0px 1px  rgb(30, 149, 247);
+  -moz-box-shadow: 1px 1px 0px 1px  rgb(30, 149, 247);
+  box-shadow: 1px 1px 0px 1px  rgb(30, 149, 247);
   translate: 1px 1px;
 }

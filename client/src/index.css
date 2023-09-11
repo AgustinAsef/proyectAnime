@@ -12,8 +12,9 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   
-  background-image:url("./imgs/cieloconubesestiloanime.png");
-   background-repeat:repeat;
+  /* background-image:url("./imgs/cieloconubesestiloanime.png"); */
+  background-color: rgb(0, 87, 158);
+  background-repeat:repeat;
   background-position:center;
   background-size:cover;
 }
@@ -46,16 +47,16 @@ h1 {
 }
 
 .button:hover {  
-  -webkit-box-shadow: 5px 5px 0px -1px  rgb(30, 196, 247);
-  -moz-box-shadow: 5px 5px 0px -1px  rgb(30, 196, 247);
-  box-shadow: 5px 5px 0px -1px  rgb(30, 196, 247);
+  -webkit-box-shadow: 5px 5px 0px -1px  rgb(30, 149, 247);
+  -moz-box-shadow: 5px 5px 0px -1px  rgb(30, 149, 247);
+  box-shadow: 5px 5px 0px -1px  rgb(30, 149, 247);
   translate: -2px -2px;
 }
 
 .button:active {
-  -webkit-box-shadow: 1px 1px 0px 1px  rgb(30, 196, 247);
-  -moz-box-shadow: 1px 1px 0px 1px  rgb(30, 196, 247);
-  box-shadow: 1px 1px 0px 1px  rgb(30, 196, 247);
+  -webkit-box-shadow: 1px 1px 0px 1px  rgb(30, 149, 247);
+  -moz-box-shadow: 1px 1px 0px 1px  rgb(30, 149, 247);
+  box-shadow: 1px 1px 0px 1px  rgb(30, 149, 247);
   translate: 1px 1px;
 }
 
