@@ -4,9 +4,11 @@ const router = require("./src/routers/routes.js");
 const sequelize = require("./src/conection/sequelizeConetion.js")
 const cors = require("cors");
 
+require('dotenv').config();
+
 const app = express();
 
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT;
 
 app.use(bodyParser.urlencoded({ extended: true })); //  configuraciones generales
 app.use(express.json());
@@ -16,6 +18,7 @@ app.use("/", router);
 app.get("/", (req, res)=>{
     res.status(200).send("api lista")
 })
+
 app.listen(PORT, async () => { //  coneccion con el servidor y levantamiento en el puerto
     try {
         await sequelize.authenticate();
