@@ -20,15 +20,10 @@ app.get("/", (req, res)=>{
 })
 
 app.listen(PORT, async () => { //  coneccion con el servidor y levantamiento en el puerto
+    
     try {
-
         await sequelize.authenticate();
-
         console.log(`Listen PORT: ${PORT}`);
-        console.log(process.env.DB_HOST);
-        console.log(process.env.DB_USER);
-        console.log(process.env.DB_PASSWORD);
-        
     } catch (error) {
         console.log(error);
     }
