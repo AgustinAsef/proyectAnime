@@ -1,4 +1,3 @@
-const sqlConfig = require("./config.js");
 const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize({
