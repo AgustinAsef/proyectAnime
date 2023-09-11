@@ -1,21 +1,21 @@
 const Sequelize = require ("../conection/sequelizeConetion.js") ;
-const User = require("../models/user.js");
-const Serie = require ("../models/serie.js")
-const Caps = require ("../models/cap.js");
+const user = require("../models/user.js");
+const serie = require ("../models/serie.js")
+const caps = require ("../models/cap.js");
 
 
 const getUser = async (userEmail, userPassword) => {
 
-   let userWithSerie = await User.findOne({ //  recibe el id y la contrasena del usuario y lo busca con sus series
+   let userWithSerie = await user.findOne({ //  recibe el id y la contrasena del usuario y lo busca con sus series
         attributes: ['id', 'email', 'userName'],
          include: [
           {
-            model: Serie,
+            model: serie,
             attributes: ['id', 'serieName'],
             where: { createdBy: Sequelize.col('User.id') },
             include: [
               {
-                model: Caps,
+                model: caps,
                 attributes: ['id', 'isCheck', 'capNum'],
               }
             ]
@@ -24,7 +24,7 @@ const getUser = async (userEmail, userPassword) => {
         where: {email:userEmail, password:userPassword}
       })
       if (userWithSerie == null) { //  si el usuario no tiene series asociadas trae solo los datos del usuario
-        let onlyUser = await User.findOne({where: {email:userEmail, password:userPassword}})
+        let onlyUser = await user.findOne({where: {email:userEmail, password:userPassword}})
         if (onlyUser == null) {
           return(error)
         }else{
@@ -37,9 +37,9 @@ const getUser = async (userEmail, userPassword) => {
 
 const newUser = async (userEmail, userPassword, userName) => { //  agrega un usuario a la base de datos
     console.log(userEmail, userPassword,userName);
-    let user = await User.findOne({where:{email: userEmail}})
-    if (user == null) {
-        let newUser = await User.create({email:userEmail, password:userPassword, userName:userName})
+    let userDB = await user.findOne({where:{email: userEmail}})
+    if (userDB == null) {
+        let newUser = await user.create({email:userEmail, password:userPassword, userName:userName})
         return(newUser)
     }else{
         return(error)        
